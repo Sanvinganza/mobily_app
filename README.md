@@ -1,7 +1,5 @@
 # react-native-apollo-graphql-test-app/react-native_apollo_graphql-test-app
 
-
-
 ## Getting Started
 
 Download links:
@@ -9,8 +7,6 @@ Download links:
 SSH clone URL: ssh://git@git.jetbrains.space/dashbouquet/react-native-apollo-graphql-test-app/react-native_apollo_graphql-test-app.git
 
 HTTPS clone URL: https://git.jetbrains.space/dashbouquet/react-native-apollo-graphql-test-app/react-native_apollo_graphql-test-app.git
-
-
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
