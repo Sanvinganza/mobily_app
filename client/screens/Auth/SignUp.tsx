@@ -39,9 +39,9 @@ const AuthSignUp = ({ navigation }) => {
                 value={lastName}
                 onChangeText={(text: React.SetStateAction<string>) => setLastName(text)}
                 style={styles.input}
-                placeholder="name@exemple.com"
+                placeholder="enter your last name "
             />
-            <Text style={styles.textGray}>Create Password</Text>
+            <Text style={styles.textGray}>E-mail</Text>
             <TextInput
                 value={login}
                 onChangeText={(text: React.SetStateAction<string>) => setLogin(text)}
