@@ -29,13 +29,15 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
            data={categoriesData}
            keyExtractor={item => item.id}
            numColumns={2}
-           renderItem={({item:{ title, image}})=>(
+           renderItem={({item: { title, image }})=>(
             <View style={styles.categoriesBlock}>
+             <TouchableOpacity>
               <Image
                 source={image}
                 style={styles.categoriesImage}
               />
               <Text style={styles.categoriesTitle}>{title}</Text>
+             </TouchableOpacity>
             </View>
           )}
          />
