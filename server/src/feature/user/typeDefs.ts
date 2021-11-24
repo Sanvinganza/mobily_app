@@ -13,7 +13,7 @@ type Users {
   }
 
   type Mutation {
-    signUp( userName: String!, userLastName: String!, email: String!): [Users!]
+    signUp( userName: String!, userLastName: String!, email: String!): Users!
     signIn(userName: String!, email: String!): Token!
     updateUser(id: String, userName: String, userLastName: String, email: String ): [Users!]
     deleteUserById(id: String!): [Users!]

@@ -1,11 +1,19 @@
-import { User } from '../model'
+import { User } from '../model';
 
-export default {
-    signUp: User.create({
-        userName: "test@test.com",
-        userLastName: "Alice",
-        email: '12345'
-      }).then(res=>{
-        console.log(res);
-      }).catch(err=>console.log(err)),
+export type ResolverFn = (parent: any, args: any, ctx: any, info: any) => Promise<any>;
+
+export interface IResolverMap {
+  [field: string]: ResolverFn;
+}
+
+export default <IResolverMap>{
+    signUp: async (parent, args, { model }, info ) => {
+      const { userName, userLastName, email } = args;
+      const user = await User.create({
+        userName,
+        userLastName,
+        email
+      })
+      return user
+    }
 }
