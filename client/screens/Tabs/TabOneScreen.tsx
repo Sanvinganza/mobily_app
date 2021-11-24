@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, SafeAreaView, TouchableOpacity, Text, View, FlatList, Image, ScrollView  } from 'react-native';
+import { StyleSheet, SafeAreaView, TouchableOpacity, Text, View, FlatList, Image, ScrollView } from 'react-native';
 import { RootTabScreenProps } from '../../types';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { TextInput } from 'react-native-gesture-handler';
@@ -37,7 +37,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
                 style={styles.categoriesImage}
               />
               <Text style={styles.categoriesTitle}>{title}</Text>
-             </TouchableOpacity>
+            </TouchableOpacity>
             </View>
           )}
          />
