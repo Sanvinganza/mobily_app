@@ -14,7 +14,6 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import AuthSignUp from '../screens/Auth/SignUp';
 import AuthLogin from '../screens/Auth/Login';
-import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/Tabs/TabOneScreen';
 import TabTwoScreen from '../screens/Tabs/TabTwoScreen';
