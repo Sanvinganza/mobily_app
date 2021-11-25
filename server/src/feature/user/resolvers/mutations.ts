@@ -26,7 +26,7 @@ const createToken = async (user: any, secret: any, expiresIn: any) => {
 
 export default <IResolverMap>{
     signUp: async (parent, { userName, userLastName, email }, {secret})=> {
-      try{
+      
         const users = await User.findOne({
           where: {
             userName: userName,
@@ -39,7 +39,7 @@ export default <IResolverMap>{
         userLastName,
         email
       })
-      return { token: createToken(user, secret, '30m') };}} catch (error) {throw new Error("not found");
+      return { token: createToken(user, secret, '30m') };} else {throw new Error("not found");
     }
       }
     ,
@@ -49,7 +49,7 @@ export default <IResolverMap>{
       { userName, email },
       { secret },
     ) => {
-      try{
+      
         const users = await User.findOne({
           where: {
             userName: userName,
@@ -57,7 +57,7 @@ export default <IResolverMap>{
          },
       })
       if(users!=null){
-       return { token: createToken(users, secret, '30m') };}} catch (error) {throw new Error("not found");
+       return { token: createToken(users, secret, '30m') };}else {throw new Error("not found");
     }     
     },
 }
