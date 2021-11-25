@@ -7,7 +7,7 @@ export interface IResolverMap {
 }
 
 export default <IResolverMap>{
-    getUsers: async (parent, args, { model }, info ) => {
+    getUsers: async () => {
       try{
         const users = await User.findAll();
         return users
@@ -15,5 +15,18 @@ export default <IResolverMap>{
       catch(error){
         console.log(error)
       }
-    }
+    },
+    getUser: async (parent, args) => {
+      try {
+        const {  userName, email } = args;
+        const user = await User.findOne({
+          where: {
+            userName: userName,
+            email: email
+         },
+      })
+        return user;
+      } catch (error) {throw new Error("not found");
+      }
+    },
 }

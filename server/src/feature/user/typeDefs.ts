@@ -9,11 +9,11 @@ type Users {
 
   type Query {
     getUsers: [Users!]!
-    getUser(userName: String!, email: String!): [Users!]!
+    getUser(userName: String!, email: String!): Users
   }
 
   type Mutation {
-    signUp( userName: String!, userLastName: String!, email: String!): Users!
+    signUp(userName: String!, userLastName: String!, email: String!): Token!
     signIn(userName: String!, email: String!): Token!
     updateUser(id: String, userName: String, userLastName: String, email: String ): [Users!]
     deleteUserById(id: String!): [Users!]
@@ -21,7 +21,7 @@ type Users {
 
   type Token {
     userID: ID!
-    token: String!      
+    token: String!
   }
 
   schema {

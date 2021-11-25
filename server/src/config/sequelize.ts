@@ -1,10 +1,9 @@
 import {Sequelize} from 'sequelize'
 
-export const sequelize = new Sequelize('myusers', 'postgres', 'savenkov', {
+export const sequelize = new Sequelize('myusers', 'postgres', '1111', {
     host: 'localhost',
     dialect: 'postgres'
   });
-  
 export const sequelizeConnect = async () => {
   try {
     await sequelize.authenticate();

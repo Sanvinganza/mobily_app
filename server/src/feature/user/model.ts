@@ -20,8 +20,5 @@ const User = sequelize.define('User', {
 })
 
 sequelize.sync()
-  // .then(result=>console.log(result))
-  // .catch(err=> console.log(err));
-  // console.log(User === sequelize.models.User);
 
 export { User }
