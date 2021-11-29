@@ -14,11 +14,11 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/Tabs/TabOneScreen';
 import TabTwoScreen from '../screens/Tabs/TabTwoScreen';
 import TabThreeScreen from '../screens/Tabs/TabThreeScreen';
-import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import { RootStackParamList, RootTabParamList, RootTabScreenProps, InfoNavigateProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
 
-export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }, {navigation}: InfoNavigateProps) {
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
@@ -44,11 +44,6 @@ function RootNavigator() {
     </Stack.Navigator>
   );
 }
-
-/**
- * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
- * https://reactnavigation.org/docs/bottom-tab-navigator
- */
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
@@ -57,7 +52,7 @@ function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
       initialRouteName="RootTab"
-      tabBarOptions={{ showLabel: false }}
+      
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
@@ -88,4 +83,3 @@ function BottomTabNavigator() {
     </BottomTab.Navigator>
   );
 }
-

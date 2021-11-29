@@ -4,8 +4,10 @@ import { TextInput } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-navigation';
 import Logo from '../../assets/images/auth/Logo.png';
 import bg from '../../assets/images/auth/bg_auth.png';
+import { InfoNavigateProps } from '../../types';
 
-const AuthSignUp = ({ navigation }) => {
+
+const AuthSignUp = ({ navigation }: InfoNavigateProps) => {
   const [name, setName] = useState('');
   const [login, setLogin] = useState('');
   const [lastName, setLastName] = useState('');

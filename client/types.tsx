@@ -6,6 +6,7 @@
  import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
  import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
  import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { NavigationScreenProp } from 'react-navigation';
  
  declare global {
    namespace ReactNavigation {
@@ -33,6 +34,11 @@
    TabThree: undefined;
  };
  
+ export interface InfoNavigateProps {
+ navigation: NavigationScreenProp<RootStackParamList, 'Root'>
+};
+
+
  export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
    BottomTabScreenProps<RootTabParamList, Screen>,
    NativeStackScreenProps<RootStackParamList>
